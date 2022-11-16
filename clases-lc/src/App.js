@@ -1,31 +1,22 @@
 import "./App.css";
-import {curiosidades, caracteristicas} from './data'
+import NavBar from "./components/NavBar";
+import Pie from "./components/Pie";
+import Cuerpo from "./components/Cuerpo";
+import BookContextProvider from "./providers/bookContextProvider";
+import TemaContextoProvider from "./providers/TemaContextoProvider";
 
 function App() {
-  const bienvenida = "Bienvenidos a React!";
-
-  
   return (
     //JSX
-    <div className="App">
-      <header className="App-header">
-        <h1>{bienvenida}</h1>
-        <h2>Curiosidades</h2>
-        <ul>
-          {curiosidades.map((curiosidad) => {
-            return <li key={curiosidad.id}>{curiosidad.descripcion}</li>;
-          })}
-        </ul>
-        <h2>Características</h2>
-        <ul>
-          {caracteristicas.map((caracteristica) => {
-            return (
-              <li key={caracteristica.id}>{caracteristica.descripcion}</li>
-            );
-          })}
-        </ul>
-      </header>
-    </div>
+    <>
+      <div className="pagina">
+        <TemaContextoProvider>
+          <NavBar />
+          <Cuerpo />
+          <Pie />
+        </TemaContextoProvider>
+      </div>
+    </>
   );
 }
 

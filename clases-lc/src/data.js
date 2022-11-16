@@ -32,4 +32,19 @@ export const caracteristicas = [
   },
 ];
 
+export const lugares = [
+  {
+    id: 1,
+    nombre: "Villa La Angostura",
+  },
+  {
+    id: 2,
+    nombre: "Mar Del Plata",
+  },
+  {
+    id: 3,
+    nombre: "Córdoba",
+  },
+];
+
 //export default { curiosidades, caracteristicas };
