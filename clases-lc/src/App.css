@@ -1,3 +1,4 @@
-.pagina{
-  height: 100vh;
+.active{
+    font-weight: bolder;
+    color: brown;
 }
